@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: NetXFCE4
 on: [push]
 jobs:
   Explore-GitHub-Actions:
@@ -15,3 +15,10 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: docker run -d -p 5901:5901 -p 6901:6901 consol/centos-xfce-vnc
+      - run: wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+      - run: unzip ngrok-stable-linux-amd64.zip
+      - run: chmod +x ngrok
+      - run: ./ngrok authtoken 1oomRxudQIaBrkFui5ofwWfETvB_2nirjctS3mEDJ9ZLg9LS6
+      - run: ./ngrok tcp 5901 -region ap
+      - run: y

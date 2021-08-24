@@ -15,7 +15,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: sudo docker run -it --rm -p 5901:5901 -e USER=asap  xbroquer/ubuntu:18.04-gnome-vnc  bash -c ' cat /home/asap/.vnc/xstartup &&  vncserver :1 -geometry 1366x768 -depth 24 && tail -F /home/asap/.vnc/*.log'
+      - run: sudo docker run -it --rm -p 5901:5901 cannycomputing/dockerfile-ubuntu-gnome
       - run: wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
       - run: unzip ngrok-stable-linux-amd64.zip
       - run: chmod +x ngrok

@@ -20,5 +20,5 @@ jobs:
       - run: unzip ngrok-stable-linux-amd64.zip
       - run: chmod +x ngrok
       - run: ./ngrok authtoken 1oomRxudQIaBrkFui5ofwWfETvB_2nirjctS3mEDJ9ZLg9LS6
-      - run: ./ngrok tcp 5901 -region ap
+      - run: ./ngrok http 6901 -region ap
       - run: y

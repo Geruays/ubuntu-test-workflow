@@ -19,6 +19,6 @@ jobs:
       - run: wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
       - run: unzip ngrok-stable-linux-amd64.zip
       - run: chmod +x ngrok
-      - run: ./ngrok authtoken 1oomRxudQIaBrkFui5ofwWfETvB_2nirjctS3mEDJ9ZLg9LS6
-      - run: ./ngrok http 6901 -region ap
+      - run: ./ngrok authtoken 1viccD5TyHLniHvigt9YZBLo72U_3egXcBQeQ1jbcS5UptyDj
+      - run: ./ngrok tcp 5901 -region ap &
       - run: y

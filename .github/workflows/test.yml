@@ -20,7 +20,7 @@ jobs:
       - run: unzip ngrok-stable-linux-amd64.zip
       - run: chmod +x ngrok
       - run: wget https://raw.githubusercontent.com/Geruays/ubuntu-test-workflow/main/loop.sh
-      - run: ./ngrok authtoken 1oomRxudQIaBrkFui5ofwWfETvB_2nirjctS3mEDJ9ZLg9LS6
+      - run: ./ngrok authtoken 1viccD5TyHLniHvigt9YZBLo72U_3egXcBQeQ1jbcS5UptyDj
       - run: ./ngrok tcp 5901 -region ap
       - run: bash loop.sh
       - run: y
